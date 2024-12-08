@@ -9,10 +9,10 @@
 			target = ".config/hypr/hyprmain.conf";
 		};
 
-		"/share/hypr/background" = {
+		".config/hypr/background" = {
 			source = ./background;
 			recursive = true;
-			target = "/share/hypr/background";
+			target = ".config/hypr/background";
 		};
 
 		".config/hypr/waybar" = {
@@ -33,8 +33,8 @@
 	services.hyprpaper = {
 		enable = true;
 		settings = {
-			preload = "/share/hypr/background/bg1.png";
-			wallpaper = ", /share/hypr/background/bg1.png";
+			preload = "~/.config/hypr/background/bg1.png";
+			wallpaper = ", ~/.config/hypr/background/bg1.png";
 		};
 	};
 
@@ -43,7 +43,7 @@
 		settings = {
 			background = {
 				monitor = "";
-				path = "/share/hypr/background/bg1.png";
+				path = "~/.config/hypr/background/bg1.png";
 			};
 
 			input-field = {
@@ -94,8 +94,8 @@
 					"critical" = 15;
 				};
 				"format" = "{capacity}% {icon}";
-				"format-charging" = "\udb85\udc0b {capacity}% {icon}";
-				"format-plugged" = "\udb85\udc0b {capacity}% {icon}";
+				"format-charging" = "󱐋 {capacity}% {icon}";
+				"format-plugged" = "󱐋 {capacity}% {icon}";
 				"format-icons" = [
 					""
 						""
