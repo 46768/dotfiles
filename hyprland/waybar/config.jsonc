@@ -1,0 +1,71 @@
+{
+  "layer": "top",
+  "modules-left": ["wireplumber" /*"hyprland/workspaces"*/],
+  "modules-center": ["clock"],
+  "modules-right": ["battery", "cpu", "memory", "network"],
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "\udb85\udc0b {capacity}% {icon}",
+    "format-plugged": "\udb85\udc0b {capacity}% {icon}",
+    "format-icons": [
+      "\uf244",
+      "\uf243", 
+      "\uf242", 
+      "\uf241", 
+      "\uf240"
+    ]
+  },
+
+  "cpu": {
+    "format": "{usage}% \uf4bc"
+  },
+
+  "memory": {
+    "format": "{}% \uefc5"
+  },
+
+  "network": {
+    "format": "{essid} {icon}",
+    "tooltip-format": "IP: {ipaddr}\nGateway: {gwaddr}\nSpeed: {bandwidthTotalBytes}",
+    "format-ethernet": "{ipaddr} \udb80\udf17",
+    "format-disconnected": "None \udb82\udd2e",
+    "format-icons": [
+      "\udb82\udd2f",
+      "\udb82\udd1f",
+      "\udb82\udd22",
+      "\udb82\udd25",
+      "\udb82\udd28"
+    ]
+  },
+
+  "wireplumber": {
+    "format": "{volume}% \uf485",
+    "format-muted": "Off \uf466"
+  },
+
+  "clock": {
+    "format": "{:%H:%M %d/%m/%Y}"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    }
+  }
+}

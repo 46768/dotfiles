@@ -9,10 +9,16 @@
 			target = ".config/hypr/hyprmain.conf";
 		};
 
-		".config/hypr/background" = {
+		"/share/hypr/background" = {
 			source = ./background;
 			recursive = true;
-			target = ".config/hypr/background";
+			target = "/share/hypr/background";
+		};
+
+		".config/hypr/waybar" = {
+			source = ./waybar;
+			recursive = true;
+			target = ".config/hypr/waybar";
 		};
 	};
 
@@ -27,8 +33,8 @@
 	services.hyprpaper = {
 		enable = true;
 		settings = {
-			preload = "./background/bg1.png";
-			wallpaper = ", ./background/bg1.png";
+			preload = "/share/hypr/background/bg1.png";
+			wallpaper = ", /share/hypr/background/bg1.png";
 		};
 	};
 
@@ -37,7 +43,7 @@
 		settings = {
 			background = {
 				monitor = "";
-				path = "./background/bg1.png";
+				path = "/share/hypr/background/bg1.png";
 			};
 
 			input-field = {
@@ -70,5 +76,83 @@
 				valign = "center";
 			};
 		};
+	};
+
+	programs.waybar = {
+		enable = true;
+		style = ./waybar/style.css;
+		settings = {
+			mainBar = {
+			"layer" = "top";
+			"modules-left" = ["wireplumber" /*"hyprland/workspaces"*/];
+			"modules-center" = [ "clock" ];
+			"modules-right" = [ "battery" "cpu" "memory" "network" ];
+
+			"battery" = {
+				"states" = {
+					"warning" = 30;
+					"critical" = 15;
+				};
+				"format" = "{capacity}% {icon}";
+				"format-charging" = "\udb85\udc0b {capacity}% {icon}";
+				"format-plugged" = "\udb85\udc0b {capacity}% {icon}";
+				"format-icons" = [
+					""
+						""
+						"" 
+						"" 
+						""
+				];
+			};
+
+			"cpu" = {
+				"format" = "{usage}% ";
+			};
+
+			"memory" = {
+				"format" = "{}% ";
+			};
+
+			"network" = {
+				"format" = "{essid} {icon}";
+				"tooltip-format" = "IP: {ipaddr}\nGateway: {gwaddr}\nSpeed: {bandwidthTotalBytes}";
+				"format-ethernet" = "{ipaddr} 󰌗";
+				"format-disconnected" = "None 󰪎";
+				"format-icons" = [
+					"󰤯"
+						"󰤟"
+						"󰤢"
+						"󰤥"
+						"󰤨"
+				];
+			};
+
+			"wireplumber" = {
+				"format" = "{volume}% ";
+				"format-muted" = "Off ";
+			};
+
+			"clock" = {
+				"format" = "{:%H:%M %d/%m/%Y}";
+			};
+
+			"hyprland/workspaces" = {
+				"disable-scroll" = true;
+				"all-outputs" = true;
+				"persistent_workspaces" = {
+					"1" = [];
+					"2" = [];
+					"3" = [];
+					"4" = [];
+					"5" = [];
+					"6" = [];
+					"7" = [];
+					"8" = [];
+					"9" = [];
+					"10" = [];
+				};
+			};
+		};
+	};
 	};
 }
