@@ -1,11 +1,15 @@
 local opts = require('fn')
 local cwd = vim.fn.getcwd()
+local jdtlsConfig = "config_linux"
+if opts.OS == "Windows_NT" then
+	jdtlsConfig = "config_win"
+end
 
 local config = {
 	cmd = {
 
 		-- 💀
-		'java', -- or '/path/to/java17_or_newer/bin/java'
+		'$JAVA_HOME/bin/java', -- or '/path/to/java17_or_newer/bin/java'
 		-- depends on if `java` is in your $PATH env variable and if it points to the right version.
 
 		'-Declipse.application=org.eclipse.jdt.ls.core.id1',
@@ -26,7 +30,7 @@ local config = {
 
 
 		-- 💀
-		'-configuration', opts.findMasonPackageDir('jdtls', 'config_linux'),
+		'-configuration', opts.findMasonPackageDir('jdtls', jdtlsConfig),
 		-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
 		-- Must point to the                      Change to one of `linux`, `win` or `mac`
 		-- eclipse.jdt.ls installation            Depending on your system.
