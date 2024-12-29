@@ -27,7 +27,7 @@
 
 # Import nix modules
 	xdg.configFile."home-manager/nix" = {
-		source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/home-manager/nix";
+		source = "${config.home.homeDirectory}/home-manager/nix";
 		target = "home-manager/nix";
 	};
 
