@@ -42,6 +42,7 @@ if [ -d /home/yrth/dotfiles ]; then
 fi
 
 sudo -u yrth mkdir /home/yrth/dotfiles
+sudo -u yrth git clone "https://github.com/46768/dotfiles.git" /home/yrth/home-manager
 sudo -u yrth git clone "https://github.com/46768/nvim-conf.git" /home/yrth/dotfiles/nvim
 sudo -u yrth git clone "https://github.com/46768/hyprland-conf.git" /home/yrth/dotfiles/hyprland
 
