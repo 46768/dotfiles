@@ -7,7 +7,7 @@ in
 	programs.bash = {
 		enable = true;
 		shellAliases = {
-			"sys-rebuild" = "sudo nixos-rebuild switch --flake /etc/nixos";
+			"sys-rebuild" = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
 			"panic" = "shutdown now";
 		};
 	};

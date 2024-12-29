@@ -28,7 +28,7 @@ sudo cp ./nixos/flake.lock /etc/nixos/flake.lock
 sudo cp ./nixos/system.nix /etc/nixos/system.nix
 sudo cp ./nixos/users.nix /etc/nixos/users.nix
 
-sudo nixos-rebuild switch --flake /etc/nixos
+sudo nixos-rebuild switch --flake /etc/nixos#nixos
 sudo passwd yrth
 su yrth
 
