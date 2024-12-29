@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 # You mostly never want to change this file as it manages the nix modules
 # for this user
@@ -8,9 +8,6 @@
 	home.username = "yrth";
 	home.homeDirectory = "/home/yrth";
 
-	imports = [
-		./nix/imports.nix
-	];
 
 # This value determines the Home Manager release that your configuration is
 # compatible with. This helps avoid breakage when a new Home Manager release
@@ -21,12 +18,16 @@
 # release notes.
 	home.stateVersion = "24.05"; # Please read the comment before changing.
 
+		imports = if (builtins.pathExists ./nix/imports.nix) then [
+		./nix/imports.nix
+		] else [];
+
 # Enable XDG
 		xdg.enable = true;
 
 # Import nix modules
 	xdg.configFile."home-manager/nix" = {
-		source = "${config.home.homeDirectory}/home-manager/nix";
+		source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/home-manager/nix";
 		target = "home-manager/nix";
 	};
 
