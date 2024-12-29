@@ -55,4 +55,8 @@ fi
 sudo -u yrth cp ./home.nix /home/yrth/.config/home-manager
 sudo -u yrth cp ./flake.nix /home/yrth/.config/home-manager
 sudo -u yrth cp ./flake.lock /home/yrth/.config/home-manager
+
+# First switch to bootstrap modules
+sudo -u yrth home-manager switch --impure --flake /home/yrth/.config/home-manager
+# Second switch to actually install the module
 sudo -u yrth home-manager switch --impure --flake /home/yrth/.config/home-manager
