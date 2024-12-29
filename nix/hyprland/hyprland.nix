@@ -13,7 +13,7 @@
 		enable = true;
 
 		settings = {
-			"source" = "${config.home.homeDirectory}/dotfiles/hyprland/hyprmain.conf";
+			"source" = "${config.home.homeDirectory}/dotfiles/hyprland/hyprland/hyprmain.conf";
 		};
 	};
 }
