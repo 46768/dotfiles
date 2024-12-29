@@ -3,7 +3,7 @@
 {
 	programs.waybar = {
 		enable = true;
-		style = ./waybar/style.css;
+		style = ${config.home.homeDirectory}/dotfiles/hyprland/waybar/style.css;
 		settings = {
 			mainBar = {
 				"layer" = "top";

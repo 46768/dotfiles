@@ -7,10 +7,9 @@
 	home.homeDirectory = "/home/yrth";
 
 	imports = [
-		./hyprland/hyprland.nix
-
-			./neovim/neovim.nix
-			./git.nix
+		./nix/hyprland/hyprland.nix
+			./nix/neovim/neovim.nix
+			./nix/git.nix
 	];
 
 # This value determines the Home Manager release that your configuration is
@@ -22,22 +21,27 @@
 # release notes.
 	home.stateVersion = "24.05"; # Please read the comment before changing.
 
+# Enable XDG
+		xdg.enable = true;
+
 # The home.packages option allows you to install Nix packages into your
 # environment.
-		home.packages = [
+	home.packages = [
 		pkgs.fastfetch
 			pkgs.firefox
+
+			# Java
 			pkgs.graalvm-ce
 			pkgs.maven
-			pkgs.tree
 
 # # You can also create simple shell scripts directly inside your
 # # configuration. For example, this adds a command 'my-hello' to your
 # # environment:
-# (pkgs.writeShellScriptBin "my-hello" ''
-#   echo "Hello, ${config.home.username}!"
-# '')
-		];
+	(pkgs.writeShellScriptBin "my-hello" ''
+		echo "Hello, ${config.home.username}!"
+		echo "My home dir is ${config.home.homeDirectory}"
+	'')
+	];
 
 # Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;

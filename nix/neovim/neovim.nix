@@ -1,11 +1,10 @@
 { config, pkgs, ... }:
 
 {
-	home.file = {
-		".config/nvim" = {
-			source = ./nvim;
-			recursive = true;
-			target = ".config/nvim";
+	xdg.configFile = {
+		"nvim" = {
+			source = ${config.home.homeDirectory}/dotfiles/nvim;
+			target = "nvim";
 		};
 	};
 	programs.neovim = {
