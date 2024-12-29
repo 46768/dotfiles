@@ -88,9 +88,6 @@
 # Util
 			unzip
 
-# Zig
-			zig
-
 # C stuff
 			glibc
 			gnumake
@@ -106,8 +103,8 @@
 			# QEMU
 			qemu
 
-			# Nasm
-			nasm
+			# Cron
+			cron
 	];
 
 # Hyprland Window Manager
