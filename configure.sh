@@ -30,7 +30,6 @@ sudo cp ./nixos/users.nix /etc/nixos/users.nix
 
 sudo nixos-rebuild switch --flake /etc/nixos#nixos
 sudo passwd yrth
-su yrth
 
 # Home manager configuration
 if ! command -v git >/dev/null 2>&1; then
@@ -38,18 +37,22 @@ if ! command -v git >/dev/null 2>&1; then
 	exit 1
 fi
 
-if [ -d ~/dotfiles ]; then
-	rm -rf ~/dotfiles
+if [ -d /home/yrth/dotfiles ]; then
+	rm -rf /home/yrth/dotfiles
 fi
 
-mkdir ~/dotfiles
-git clone "https://github.com/46768/nvim-conf.git" ~/dotfiles/nvim
-git clone "https://github.com/46768/hyprland-conf.git" ~/dotfiles/hyprland
+sudo -u yrth mkdir /home/yrth/dotfiles
+sudo -u yrth git clone "https://github.com/46768/nvim-conf.git" /home/yrth/dotfiles/nvim
+sudo -u yrth git clone "https://github.com/46768/hyprland-conf.git" /home/yrth/dotfiles/hyprland
 
-if [ ! -d ~/.config/home-manager ]; then
-	mkdir ~/.config/home-manager
+if [ ! -d /home/yrth/.config ]; then
+	sudo -u yrth mkdir /home/yrth/.config
 fi
-cp ./home.nix ~/.config/home-manager
-cp ./flake.nix ~/.config/home-manager
-cp ./flake.lock ~/.config/home-manager
-home-manager switch --impure --flake ~/.config/home-manager
+
+if [ ! -d /home/yrth/.config/home-manager ]; then
+	sudo -u yrth mkdir /home/yrth/.config/home-manager
+fi
+sudo -u yrth cp ./home.nix /home/yrth/.config/home-manager
+sudo -u yrth cp ./flake.nix /home/yrth/.config/home-manager
+sudo -u yrth cp ./flake.lock /home/yrth/.config/home-manager
+sudo -u yrth home-manager switch --impure --flake /home/yrth/.config/home-manager
