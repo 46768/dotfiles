@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
 
+# You mostly never want to change this file as it manages the nix modules
+# for this user
 {
 # Home Manager needs a bit of information about you and the paths it should
 # manage.
@@ -7,9 +9,7 @@
 	home.homeDirectory = "/home/yrth";
 
 	imports = [
-		./nix/hyprland/hyprland.nix
-			./nix/neovim/neovim.nix
-			./nix/git.nix
+		./nix/imports.nix
 	];
 
 # This value determines the Home Manager release that your configuration is
@@ -24,24 +24,11 @@
 # Enable XDG
 		xdg.enable = true;
 
-# The home.packages option allows you to install Nix packages into your
-# environment.
-	home.packages = [
-		pkgs.fastfetch
-			pkgs.firefox
-
-			# Java
-			pkgs.graalvm-ce
-			pkgs.maven
-
-# # You can also create simple shell scripts directly inside your
-# # configuration. For example, this adds a command 'my-hello' to your
-# # environment:
-	(pkgs.writeShellScriptBin "my-hello" ''
-		echo "Hello, ${config.home.username}!"
-		echo "My home dir is ${config.home.homeDirectory}"
-	'')
-	];
+# Import nix modules
+	xdg.configFile."home-manager/nix" = {
+		source = "${config.home.homeDirectory}/home-manager/nix";
+		target = "home-manager/nix";
+	};
 
 # Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;

@@ -3,7 +3,7 @@
 {
 	xdg.configFile = {
 		"nvim" = {
-			source = ${config.home.homeDirectory}/dotfiles/nvim;
+			source = "${config.home.homeDirectory}/dotfiles/nvim";
 			target = "nvim";
 		};
 	};

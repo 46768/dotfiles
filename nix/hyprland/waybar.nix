@@ -1,9 +1,15 @@
 { config, pkgs, ... }:
 
 {
+	xdg.configFile = {
+		"waybar/style.css" = {
+			source = "${config.home.homeDirectory}/dotfiles/hyprland/waybar/style.css";
+			target = "waybar/style.css";
+		};
+	};
+
 	programs.waybar = {
 		enable = true;
-		style = ${config.home.homeDirectory}/dotfiles/hyprland/waybar/style.css;
 		settings = {
 			mainBar = {
 				"layer" = "top";
