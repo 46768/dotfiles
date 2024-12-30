@@ -7,6 +7,9 @@
 		pkgs.fastfetch
 			pkgs.firefox
 
+			# Node js 23
+			pkgs.nodejs_23
+
 			# Java
 			pkgs.graalvm-ce
 			pkgs.maven

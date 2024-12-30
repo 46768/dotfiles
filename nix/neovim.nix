@@ -4,6 +4,7 @@
 	xdg.configFile = {
 		"nvim" = {
 			source = "${config.home.homeDirectory}/dotfiles/nvim/nvim";
+			recursive = true;
 			target = "nvim";
 		};
 	};
