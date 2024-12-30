@@ -8,14 +8,7 @@
 
 		extraConfig = {
 			init.defaultBranch = "main";
+			credential.helper = "store";
 		};
-
-		includes = [
-		{
-			contents = {
-				credential.helper = "store";
-			};
-		}
-		];
 	};
 }

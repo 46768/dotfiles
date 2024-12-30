@@ -9,6 +9,11 @@
 			./rofi.nix
 	];
 
+	home.packages = [
+		# Hyprland Clipboard
+		pkgs.wl-clipboard
+	];
+
 	wayland.windowManager.hyprland = {
 		enable = true;
 

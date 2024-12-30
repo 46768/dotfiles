@@ -7,5 +7,6 @@
 			./neovim.nix
 			./git.nix
 			./packages.nix
+			./btop.nix
 	];
 }

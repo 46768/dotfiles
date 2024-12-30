@@ -22,6 +22,18 @@
 	boot.loader.grub.enable = true;
 	boot.loader.grub.efiSupport = true;
 	boot.loader.grub.device = "nodev";
+	boot.loader.grub.configurationName = "Linux Boot Manager";
+	boot.loader.grub.extraEntries = ''
+		# Shutdown option
+		menuentry "Shutdown" {
+			halt
+		}
+
+		# Boot to firmware
+		menuentry "Firmware" {
+			fwsetup
+		}
+	'';
 	boot.loader.efi.canTouchEfiVariables = true;
 	boot.supportedFilesystems = [ "ntfs" ];
 
@@ -73,16 +85,7 @@
 	programs.virt-manager.enable = true;
 
 	environment.systemPackages = with pkgs; [
-# Home manager
-		home-manager
-		
-		# Hyprland Clipboard
-		wl-clipboard
-
-			efibootmgr
 			git
-			vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-			wget
 
 # Util
 			unzip
@@ -90,15 +93,17 @@
 # C stuff
 			glibc
 			gnumake
-			gcc14
+			gcc
 			gdb
 
-			# Python 3.14
-			python314
+			# Python 3
+			python3
 
 			# Cron
 			cron
 	];
+
+	programs.nix-ld.enable = true;
 
 # Hyprland Window Manager
 	programs.hyprland = {
