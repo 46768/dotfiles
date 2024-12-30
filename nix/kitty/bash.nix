@@ -40,9 +40,11 @@ curGen=$(home-manager generations | head -n 1 | grep -o -E "id [0-9]+" | grep -o
 nextGen=$((curGen + 1))
 
 git -C ${homeDir}/home-manager add .
-git -C ${homeDir}/home-manager commit -m "Generation $nextGen"
+git -C ${homeDir}/home-manager commit -m "Generation $nextGen $(date)"
 
-
+# first switch to update modules
+home-manager switch --impure --flake ~/.config/home-manager
+# second switch to install/update
 home-manager switch --impure --flake ~/.config/home-manager
 		 '')
 	];
