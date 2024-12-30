@@ -13,5 +13,8 @@
 			# Java
 			pkgs.graalvm-ce
 			pkgs.maven
+
+			# CMake
+			pkgs.cmake
 	];
 }
