@@ -16,5 +16,9 @@
 
 			# CMake
 			pkgs.cmake
+
+			# Clang
+			pkgs.clang
+			pkgs.clang-tools
 	];
 }
