@@ -8,5 +8,6 @@
 			./git.nix
 			./packages.nix
 			./btop.nix
+			./python.nix
 	];
 }
