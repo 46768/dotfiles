@@ -2,6 +2,6 @@
 
 {
 	home.packages = [
-		conda
+		pkgs.conda
 	];
 }
