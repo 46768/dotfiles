@@ -18,5 +18,8 @@
 			pkgs.cmake
 			pkgs.clang-tools
 			pkgs.valgrind
+
+			# GNU Plot
+			pkgs.gnuplot
 	];
 }
