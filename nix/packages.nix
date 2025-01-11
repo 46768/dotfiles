@@ -14,10 +14,9 @@
 			pkgs.graalvm-ce
 			pkgs.maven
 
-			# CMake
+			# C
 			pkgs.cmake
-
-			# Clang
 			pkgs.clang-tools
+			pkgs.valgrind
 	];
 }
