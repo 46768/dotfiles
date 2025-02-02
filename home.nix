@@ -19,12 +19,12 @@
 	home.stateVersion = "24.05"; # Please read the comment before changing.
 
 	imports = [
-		./hyprland/hyprland.nix
-			./neovim.nix
-			./git.nix
-			./packages.nix
-			./btop.nix
-			./python.nix
+		./nix/hyprland/hyprland.nix
+			./nix/neovim.nix
+			./nix/git.nix
+			./nix/packages.nix
+			./nix/btop.nix
+			./nix/python.nix
 	];
 
 # Enable XDG
