@@ -2,6 +2,7 @@
 
 let
 	homeDir = config.home.homeDirectory;
+	configDir = config.xdg.configHome;
 in
 {
 	programs.bash = {
@@ -39,8 +40,8 @@ git -C ${homeDir}/dotfiles/nvim pull
 curGen=$(home-manager generations | head -n 1 | grep -o -E "id [0-9]+" | grep -o -E "[0-9]+")
 nextGen=$((curGen + 1))
 
-git -C ${homeDir}/home-manager add .
-git -C ${homeDir}/home-manager commit -m "Generation $nextGen $(date)"
+git -C ${configDir}/home-manager add .
+git -C ${configDir}/home-manager commit -m "Generation $nextGen $(date)"
 
 # first switch to update modules
 home-manager switch --impure --flake ~/.config/home-manager
