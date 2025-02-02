@@ -18,18 +18,17 @@
 # release notes.
 	home.stateVersion = "24.05"; # Please read the comment before changing.
 
-		imports = if (builtins.pathExists ./nix/imports.nix) then [
-		./nix/imports.nix
-		] else [];
+	imports = [
+		./hyprland/hyprland.nix
+			./neovim.nix
+			./git.nix
+			./packages.nix
+			./btop.nix
+			./python.nix
+	];
 
 # Enable XDG
 		xdg.enable = true;
-
-# Import nix modules
-	xdg.configFile."home-manager/nix" = {
-		source = "${config.home.homeDirectory}/home-manager/nix";
-		target = "home-manager/nix";
-	};
 
 # Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
