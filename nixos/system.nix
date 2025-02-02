@@ -18,6 +18,12 @@
 # Enable nix flakes
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+# Use Hyprland's Cachix
+nix.settings = {
+	substituters = [ "https://hyprland.cachix.org" ];
+	trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+};
+
 # Use the GRUB boot loader.
 	boot.loader.grub.enable = true;
 	boot.loader.grub.efiSupport = true;
@@ -111,7 +117,9 @@ services.xserver.xkb.options = "eurosign:e,caps:escape,grp:alt_space_toggle";
 # Hyprland Window Manager
 	programs.hyprland = {
 		enable = true;
-		xwayland.enable = true;
+
+		package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+		portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
 	};
 
 	fonts.packages = with pkgs; [
