@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 echo "This will override any current configuration.nix and flake.nix in /etc/nixos"
+echo "and ~/dotfiles"
 echo "A backup should be made with the name configuration.nix.backup and flake.nix.backup"
 read -p "Continue? (y/n): " confirm && [[ $confirm == [yY] ||  $confirm == [yY][eE][sS] ]] || exit 1
 
 # System configuration
 function createBackup () {
-	if [ -f /etc/nixos/configuration.nix ]; then
+	if [ -f ${1} ]; then
 		sudo cp $1 ${1}.backup
 	fi
 	if [ ! -f "${1}.backup" ] && [ -f $1 ]; then

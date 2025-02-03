@@ -24,5 +24,8 @@
 
 			# Profiling
 			pkgs.linuxPackages_latest.perf
+
+			# USB Utilities
+			pkgs.usbutils
 	];
 }
