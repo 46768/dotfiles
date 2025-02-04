@@ -9,6 +9,7 @@ in
 		enable = true;
 		shellAliases = {
 			"sys-rebuild" = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
+			"valgrind-f" = "valgrind --leak-check=full --track-origins=yes -s";
 			"panic" = "echo 'pls no shutdown'";
 		};
 	};
@@ -43,9 +44,6 @@ nextGen=$((curGen + 1))
 git -C ${configDir}/home-manager add .
 git -C ${configDir}/home-manager commit -m "Generation $nextGen $(date)"
 
-# first switch to update modules
-home-manager switch --impure --flake ~/.config/home-manager
-# second switch to install/update
 home-manager switch --impure --flake ~/.config/home-manager
 		 '')
 	];

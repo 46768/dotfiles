@@ -13,6 +13,7 @@
   # Enable broadcom sta
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "broadcom-sta"
+	"rtl88xxau-aircrack"
   ];
 
 # Enable nix flakes
@@ -42,6 +43,9 @@ nix.settings = {
 	'';
 	boot.loader.efi.canTouchEfiVariables = true;
 	boot.supportedFilesystems = [ "ntfs" ];
+	boot.extraModulePackages = with config.boot.kernelPackages; [
+		rtl88xxau-aircrack
+	];
 
 	networking.hostName = "pnixos"; # Define your hostname.
 # Pick only one of the below networking options.
