@@ -44,6 +44,12 @@ nextGen=$((curGen + 1))
 git -C ${configDir}/home-manager add .
 git -C ${configDir}/home-manager commit -m "Generation $nextGen $(date)"
 
+git -C ${homeDir}/dotfiles/nvim add .
+git -C ${homeDir}/dotfiles/nvim commit -m "Generation $nextGen $(date)"
+
+git -C ${homeDir}/dotfiles/hyprland add .
+git -C ${homeDir}/dotfiles/hyprland commit -m "Generation $nextGen $(date)"
+
 home-manager switch --impure --flake ~/.config/home-manager
 		 '')
 	];
