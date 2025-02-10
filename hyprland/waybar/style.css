@@ -1,0 +1,17 @@
+* {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 1);
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin-top: 10px;
+  border: 2px solid @theme_selected_bg_color;
+  background: rgba(0, 0, 0, 0);
+}

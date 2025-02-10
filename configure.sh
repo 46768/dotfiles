@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 echo "This will override any current configuration.nix and flake.nix in /etc/nixos"
-echo "and ~/dotfiles"
 echo "A backup should be made with the name configuration.nix.backup and flake.nix.backup"
 read -p "Continue? (y/n): " confirm && [[ $confirm == [yY] ||  $confirm == [yY][eE][sS] ]] || exit 1
 
@@ -42,23 +41,11 @@ if [ -d /home/yrth/dotfiles ]; then
 	rm -rf /home/yrth/dotfiles
 fi
 
-sudo -u yrth mkdir /home/yrth/dotfiles
-sudo -u yrth git clone "https://github.com/46768/dotfiles.git" /home/yrth/home-manager
-sudo -u yrth git clone "https://github.com/46768/nvim-conf.git" /home/yrth/dotfiles/nvim
-sudo -u yrth git clone "https://github.com/46768/hyprland-conf.git" /home/yrth/dotfiles/hyprland
-
 if [ ! -d /home/yrth/.config ]; then
 	sudo -u yrth mkdir /home/yrth/.config
 fi
 
-if [ ! -d /home/yrth/.config/home-manager ]; then
-	sudo -u yrth mkdir /home/yrth/.config/home-manager
-fi
-sudo -u yrth cp ./home.nix /home/yrth/.config/home-manager
-sudo -u yrth cp ./flake.nix /home/yrth/.config/home-manager
-sudo -u yrth cp ./flake.lock /home/yrth/.config/home-manager
+sudo -u yrth git clone "https://github.com/46768/dotfiles.git" /home/yrth/.config/home-manager
+sudo -u yrth git clone "https://github.com/46768/nvim-conf.git" /home/yrth/.config/nvim
 
-# First switch to bootstrap modules
-sudo -u yrth home-manager switch --impure --flake /home/yrth/.config/home-manager
-# Second switch to actually install the module
 sudo -u yrth home-manager switch --impure --flake /home/yrth/.config/home-manager

@@ -4,8 +4,8 @@
 	services.hyprpaper = {
 		enable = true;
 		settings = {
-			preload = "${config.home.homeDirectory}/dotfiles/hyprland/hyprland/background/bg1.png";
-			wallpaper = ", ${config.home.homeDirectory}/dotfiles/hyprland/hyprland/background/bg1.png";
+			preload = "${config.xdg.configHome}/home-manager/hyprland/background/bg1.png";
+			wallpaper = ", ${config.xdg.configHome}/home-manager/hyprland/background/bg1.png";
 		};
 	};
 }

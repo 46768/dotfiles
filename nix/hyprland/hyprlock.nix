@@ -6,7 +6,7 @@
 		settings = {
 			background = {
 				monitor = "";
-				path = "${config.home.homeDirectory}/dotfiles/hyprland/hyprland/background/bg1.png";
+				path = "${config.xdg.configHome}/home-manager/hyprland/background/bg1.png";
 			};
 
 			input-field = {
