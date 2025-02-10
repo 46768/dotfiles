@@ -10,6 +10,7 @@ in
 		shellAliases = {
 			"sys-rebuild" = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
 			"valgrind-f" = "valgrind --leak-check=full --track-origins=yes -s";
+			"vinote" = "NVIM_APPNAME=nvim-notes nvim";
 			"panic" = "echo 'pls no shutdown'";
 		};
 	};
