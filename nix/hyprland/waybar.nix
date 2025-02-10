@@ -3,7 +3,7 @@
 {
 	xdg.configFile = {
 		"waybar/style.css" = {
-			source = "${config.xdg.configHome}/hyprland/waybar/style.css";
+			source = "${config.xdg.configHome}/home-manager/hyprland/waybar/style.css";
 			target = "waybar/style.css";
 		};
 	};
