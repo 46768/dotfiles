@@ -51,10 +51,10 @@ git -C ${configDir}/nvim pull
 
 curGen=$(readlink "$(readlink ${homeDir}/.nix-profile)" | grep -oP "\d*")
 
-sudo rm -r ${configDir}/home-manager/nixos/*
+sudo rm -r "${configDir}/home-manager/nixos/*"
 sudo cp -r /etc/nixos/* ${configDir}/home-manager/nixos
-ls ${configDir}/home-manager/nixos | grep -i ".*\.backup" | sudo rm -r
-ls ${configDir}/home-manager/nixos | grep -i "hardware-configuration.nix" | sudo rm -r
+sudo rm $(ls ${configDir}/home-manager/nixos | grep -i ".*\.backup")
+sudo rm $(ls ${configDir}/home-manager/nixos | grep -i "hardware-configuration.nix")
 
 git -C ${configDir}/home-manager add .
 git -C ${configDir}/home-manager commit -m "System sync gen $curGen $(date)"
