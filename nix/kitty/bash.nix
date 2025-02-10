@@ -37,9 +37,6 @@ nextGen=$((curGen + 1))
 git -C ${configDir}/home-manager add .
 git -C ${configDir}/home-manager commit -m "Generation $nextGen $(date)"
 
-git -C ${configDir}/nvim add .
-git -C ${configDir}/nvim commit -m "Generation $nextGen $(date)"
-
 home-manager switch --impure --flake ${configDir}/home-manager
 		 '')
 
