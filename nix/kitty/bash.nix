@@ -7,6 +7,9 @@ in
 {
 	programs.bash = {
 		enable = true;
+		intiExtra = ''
+			fastfetch
+		'';
 		shellAliases = {
 			"sys-rebuild" = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
 			"valgrind-f" = "valgrind --leak-check=full --track-origins=yes -s";
