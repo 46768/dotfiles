@@ -7,7 +7,7 @@ in
 {
 	programs.bash = {
 		enable = true;
-		intiExtra = ''
+		initExtra = ''
 			fastfetch
 		'';
 		shellAliases = {
