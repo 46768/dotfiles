@@ -27,5 +27,8 @@
 
 			# USB Utilities
 			pkgs.usbutils
+
+			# Gaming
+			pkgs.prism-launcher
 	];
 }
