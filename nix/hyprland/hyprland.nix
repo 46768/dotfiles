@@ -7,6 +7,7 @@
 			./hyprlock.nix
 			./waybar.nix
 			./rofi.nix
+			./mako.nix
 	];
 
 	home.packages = [
@@ -34,6 +35,7 @@
 			"exec-once" = [
 				"hyprpaper"
 				"waybar"
+				"mako"
 			];
 
 			# Environment variables
