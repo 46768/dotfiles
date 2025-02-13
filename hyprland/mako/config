@@ -1,2 +1,4 @@
 max-history=5
 sort=+time
+default-timeout=5000
+font=FiraCode Nerd Font 10
