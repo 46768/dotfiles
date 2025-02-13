@@ -29,6 +29,6 @@
 			pkgs.usbutils
 
 			# Gaming
-			pkgs.prism-launcher
+			pkgs.prismlauncher
 	];
 }
