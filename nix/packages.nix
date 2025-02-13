@@ -12,6 +12,7 @@
 
 			# Java
 			pkgs.graalvm-ce
+			pkgs.graalvmPackages.graalvm-oracle_17
 			pkgs.maven
 
 			# C
