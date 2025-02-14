@@ -13,7 +13,6 @@
   # Enable broadcom sta
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "broadcom-sta"
-	"rtl88xxau-aircrack"
   ];
 
 # Enable nix flakes
@@ -47,13 +46,10 @@ nix.settings = {
 		rtl88xxau-aircrack
 	];
 
-	networking.hostName = "pnixos"; # Define your hostname.
-# Pick only one of the below networking options.
-# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-		networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+	networking.hostName = "pnixos";
+	networking.networkmanager.enable = true;
 
-# Set your time zone.
-		time.timeZone = "Asia/Bangkok";
+	time.timeZone = "Asia/Bangkok";
 
 # Configure network proxy if necessary
 # networking.proxy.default = "http://user:password@proxy:port/";
@@ -67,14 +63,8 @@ nix.settings = {
 #   useXkbConfig = true; # use xkb.options in tty.
 # };
 
-# Enable the X11 windowing system.
-services.xserver.enable = true;
-# services.displayManager.sddm.enable = true;
-# services.displayManager.sddm.wayland.enable = true;
-
-# Configure keymap in X11
-services.xserver.xkb.layout = "us,th";
-services.xserver.xkb.options = "eurosign:e,caps:escape,grp:alt_space_toggle";
+services.displayManager.sddm.enable = true;
+services.displayManager.sddm.wayland.enable = true;
 
 # Enable CUPS to print documents.
 # services.printing.enable = true;
@@ -95,7 +85,7 @@ services.xserver.xkb.options = "eurosign:e,caps:escape,grp:alt_space_toggle";
 	programs.virt-manager.enable = true;
 
 	environment.systemPackages = with pkgs; [
-			linuxKernel.packages.linux_6_6.broadcom_sta
+			home-manager
 			git
 
 # Util
@@ -142,7 +132,7 @@ services.xserver.xkb.options = "eurosign:e,caps:escape,grp:alt_space_toggle";
 # List services that you want to enable:
 
 # Enable the OpenSSH daemon.
-# services.openssh.enable = true;
+	services.openssh.enable = true;
 
 # Open ports in the firewall.
 # networking.firewall.allowedTCPPorts = [ ... ];
