@@ -71,6 +71,7 @@ fi
 
 sudo rm -r $(ls -d /etc/nixos/* | grep -v -i ".*/hardware-configuration.nix)
 sudo cp -r ${configDir}/home-manager/nixos/* /etc/nixos
+
 		 '')
 	];
 }
