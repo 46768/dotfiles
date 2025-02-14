@@ -51,11 +51,9 @@ if ! command -v git >/dev/null 2>&1; then
 	exit 1
 fi
 
-git -C ${configDir}/nvim pull
-
 curGen=$(readlink "$(readlink ${homeDir}/.nix-profile)" | grep -oP "\d*")
 
-sudo rm -r "${configDir}/home-manager/nixos/*"
+sudo rm -r $(ls -d ${configDir}/home-manager/nixos/*)
 sudo cp -r /etc/nixos/* ${configDir}/home-manager/nixos
 sudo rm $(ls -d ${configDir}/home-manager/nixos/* | grep -i ".*\.backup")
 sudo rm $(ls -d ${configDir}/home-manager/nixos/* | grep -i ".*/hardware-configuration.nix")
