@@ -61,5 +61,16 @@ sudo rm $(ls -d ${configDir}/home-manager/nixos/* | grep -i ".*/hardware-configu
 git -C ${configDir}/home-manager add .
 git -C ${configDir}/home-manager commit -m "System sync gen $curGen $(date)"
 		 '')
+
+		# System sync loading script
+		(pkgs.writeShellScriptBin "sys-sync-load" ''
+if ! command -v git >/dev/null 2>&1; then
+	echo "git not found"
+	exit 1
+fi
+
+sudo rm -r $(ls -d /etc/nixos/* | grep -v -i ".*/hardware-configuration.nix)
+sudo cp -r ${configDir}/home-manager/nixos/* /etc/nixos
+		 '')
 	];
 }
