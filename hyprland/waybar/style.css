@@ -17,13 +17,13 @@ window#waybar {
 }
 
 .modules-left {
-	clip-path: polygon(0, 0, 100% 0, 75% 100%, 0 100%);
+	transform: perspective(10px) rotateX(1deg);
 }
 
 .modules-center {
-	clip-path: polygon(0, 0, 100% 0, 75% 100%, 25% 100%);
+	transform: perspective(10px) rotateX(1deg);
 }
 
 .modules-right {
-	clip-path: polygon(0, 0, 100% 0, 100% 100%, 25% 100%);
+	transform: perspective(10px) rotateX(1deg);
 }
