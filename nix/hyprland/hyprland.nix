@@ -22,7 +22,7 @@
 			# Monitors
 			"monitor" = [
 				"eDP-1, 1920x1200@60.01, 0x0, 1"
-				"HDMI-A-1, 1920x1080@75, 1920x0, 1"
+				"HDMI-A-1, 1920x1080@75, 1920x0, 1, transform, 1"
 			];
 
 			# Programs
