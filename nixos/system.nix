@@ -126,6 +126,7 @@ services.printing.enable = true;
 
 	fonts.packages = with pkgs; [
 		nerd-fonts.fira-code
+		sarabun-font
 	];
 
 # Some programs need SUID wrappers, can be configured further or are
