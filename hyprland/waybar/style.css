@@ -12,6 +12,6 @@ window#waybar {
 .modules-center,
 .modules-right {
   margin-top: 10px;
-  border: 2px solid rgba(1, 1, 1, 1);
+  border: 2px solid rgba(79,225,188,255);
   background: rgba(0, 0, 0, 0);
 }
