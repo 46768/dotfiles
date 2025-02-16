@@ -6,6 +6,7 @@
 	home.packages = [
 		pkgs.fastfetch
 			pkgs.firefox
+			pkgs.dolphin
 
 			# Node js 23
 			pkgs.nodejs_23
