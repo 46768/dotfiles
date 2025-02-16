@@ -13,6 +13,7 @@
 	home.packages = [
 		# Hyprland Clipboard
 		pkgs.wl-clipboard
+		pkgs.grim
 	];
 
 	wayland.windowManager.hyprland = {

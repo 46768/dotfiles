@@ -12,18 +12,6 @@ window#waybar {
 .modules-center,
 .modules-right {
   margin-top: 10px;
-  border: 2px solid @theme_selected_bg_color;
+  border: 2px solid rgba(1, 1, 1, 1);
   background: rgba(0, 0, 0, 0);
-}
-
-.modules-left {
-	border-radius: 0 50px 50px 0 / 0 30px 30px 0;
-}
-
-.modules-center {
-	border-radius: 0 50px 50px 0 / 0 30px 30px 0;
-}
-
-.modules-right {
-	border-radius: 0 50px 50px 0 / 0 30px 30px 0;
 }
