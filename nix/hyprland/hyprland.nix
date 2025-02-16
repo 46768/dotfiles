@@ -194,9 +194,9 @@
 			];
 
 			"bindr" = [
-				",XF86AudioRaiseVolume, exec, wpctl set-volume -l $audioLimit @DEFAULT_AUDIO_SINK@ $audioStepI"
-				",XF86AudioLowerVolume, exec, wpctl set-volume -l $audioLimit @DEFAULT_AUDIO_SINK@ $audioStepD"
-				",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+				"ALT, A, exec, wpctl set-volume -l $audioLimit @DEFAULT_AUDIO_SINK@ $audioStepI"
+				"ALT, X, exec, wpctl set-volume -l $audioLimit @DEFAULT_AUDIO_SINK@ $audioStepD"
+				"ALT, Z, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 			];
 
 			"windowrulev2" = [
