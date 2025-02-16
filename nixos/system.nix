@@ -77,6 +77,9 @@ services.displayManager.sddm.wayland.enable = true;
 		pulse.enable = true;
 	};
 
+# Enable printing
+services.printing.enable = true;
+
 # Enable touchpad support (enabled default in most desktopManager).
 	services.libinput.enable = true;
 
@@ -90,6 +93,10 @@ services.displayManager.sddm.wayland.enable = true;
 
 # Util
 			unzip
+
+# Print driver
+			cups
+			hplip
 
 # C stuff
 			glibc
