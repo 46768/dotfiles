@@ -17,13 +17,13 @@ window#waybar {
 }
 
 .modules-left {
-	transform: perspective(10px) rotateX(1deg);
+	border-radius: 0 50px 50px 0 / 0 30px 30px 0;
 }
 
 .modules-center {
-	transform: perspective(10px) rotateX(1deg);
+	border-radius: 0 50px 50px 0 / 0 30px 30px 0;
 }
 
 .modules-right {
-	transform: perspective(10px) rotateX(1deg);
+	border-radius: 0 50px 50px 0 / 0 30px 30px 0;
 }
