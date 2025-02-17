@@ -85,6 +85,10 @@ services.printing.enable = true;
 
 # Virtualisation
 	virtualisation.libvirtd.enable = true;
+	virtualisation.docker.rootless = {
+		enable = true;
+		setSocketVariable = true;
+	};
 	programs.virt-manager.enable = true;
 
 	environment.systemPackages = with pkgs; [
