@@ -7,6 +7,7 @@
 		pkgs.fastfetch
 			pkgs.firefox
 			pkgs.dolphin
+			pkgs.firejail
 
 			# Node js 23
 			pkgs.nodejs_23
