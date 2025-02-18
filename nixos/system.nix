@@ -62,6 +62,8 @@ nix.settings = {
 	"th_TH.UTF-8/UTF-8"
   ];
 
+  services.xserver.xkb.layout = "us,th";
+
 services.displayManager.sddm.enable = true;
 services.displayManager.sddm.wayland.enable = true;
 
