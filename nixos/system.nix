@@ -58,8 +58,8 @@ nix.settings = {
 # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.supportedLocales = [
-	"en_US.UTF-8"
-	"th_TH.UTF-8"
+	"en_US.UTF-8/UTF-8"
+	"th_TH.UTF-8/UTF-8"
   ];
 
 services.displayManager.sddm.enable = true;
