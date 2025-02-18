@@ -57,6 +57,7 @@ sudo rm -r $(ls -d ${configDir}/home-manager/nixos/*)
 sudo cp -r /etc/nixos/* ${configDir}/home-manager/nixos
 sudo rm $(ls -d ${configDir}/home-manager/nixos/* | grep -i ".*\.backup")
 sudo rm $(ls -d ${configDir}/home-manager/nixos/* | grep -i ".*/hardware-configuration.nix")
+sudo chown yrth:users $(ls -d ${configDir}/home-manager/nixos/*)
 
 git -C ${configDir}/home-manager add .
 git -C ${configDir}/home-manager commit -m "System sync gen $curGen $(date)"
