@@ -61,11 +61,6 @@ nix.settings = {
 	"en_US.UTF-8"
 	"th_TH.UTF-8"
   ];
-  console = {
-    font = "Lat2-Terminus16";
-    keyMap = "us";
-    useXkbConfig = true; # use xkb.options in tty.
-  };
 
 services.displayManager.sddm.enable = true;
 services.displayManager.sddm.wayland.enable = true;
