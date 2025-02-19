@@ -32,6 +32,9 @@
 
 			# Gaming
 			pkgs.prismlauncher
+
+			# Game dev
 			pkgs.godot_4
+			pkgs.gimp
 	];
 }
