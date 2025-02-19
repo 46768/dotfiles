@@ -63,7 +63,7 @@ nix.settings = {
   ];
   i18n.inputMethod = {
 	enabled = "fcitx5";
-	fcitx5.addons = [ pkgs.fcitx5-thai ];
+	fcitx5.addons = [ pkgs.fcitx5-table-other ];
   };
 
   services.xserver.enable = true;
