@@ -40,6 +40,8 @@
 				"hyprpaper"
 				"waybar"
 				"mako"
+				"fcitx5 -d -r"
+				"fcitx5-remote -r"
 			];
 
 			# Environment variables
