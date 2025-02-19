@@ -22,8 +22,8 @@
 		settings = {
 			# Monitors
 			"monitor" = [
-				"eDP-1, 1920x1200@60.01, 0x0, 1"
-				"HDMI-A-1, 1920x1080@75, 1920x0, 1"
+				"eDP-1, preferred, auto, 1"
+				"HDMI-A-1, preferred, auto-right, 1"
 			];
 
 			# Programs
