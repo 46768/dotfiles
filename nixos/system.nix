@@ -61,6 +61,10 @@ nix.settings = {
 	"en_US.UTF-8/UTF-8"
 	"th_TH.UTF-8/UTF-8"
   ];
+  i18n.inputMethod = {
+	enabled = "fcitx5";
+	fcitx5.addons = [ pkgs.fcitx5-thai ];
+  };
 
   services.xserver.enable = true;
   services.xserver.xkb.layout = "us,th";
