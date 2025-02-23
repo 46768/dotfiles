@@ -20,6 +20,7 @@
 			pkgs.clang-tools
 			pkgs.valgrind
 			pkgs.doxygen
+			pkgs.cmocka
 
 			# GNU Plot
 			pkgs.gnuplot
