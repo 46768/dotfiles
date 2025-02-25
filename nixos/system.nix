@@ -93,7 +93,7 @@ services.printing.enable = true;
 	services.libinput.enable = true;
 
 # Enable OpenGL
-	hardware.opengl.enable = true;
+	hardware.graphics.enable = true;
 
 # Virtualisation
 	virtualisation.libvirtd.enable = true;
