@@ -125,6 +125,9 @@ services.printing.enable = true;
 
 			# Cron
 			cron
+
+# Virtualization
+			virtiofsd
 	];
 
 	programs.nix-ld.enable = true;
