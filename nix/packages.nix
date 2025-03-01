@@ -5,7 +5,6 @@
 # environment.
 	home.packages = [
 		pkgs.fastfetch
-			pkgs.firefox
 			pkgs.librewolf
 			pkgs.dolphin
 

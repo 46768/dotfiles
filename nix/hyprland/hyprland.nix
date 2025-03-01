@@ -29,7 +29,7 @@
 			# Programs
 			"$terminal" = "kitty";
 			"$fileManager" = "dolphin";
-			"$webBrowser" = "firefox";
+			"$webBrowser" = "librewolf";
 			"$menu" = "rofi -show drun";
 			"$audioStepI" = "5%+";
 			"$audioStepD" = "5%-";
