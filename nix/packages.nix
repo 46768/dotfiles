@@ -5,7 +5,6 @@
 # environment.
 	home.packages = [
 		pkgs.fastfetch
-			pkgs.librewolf
 			pkgs.dolphin
 
 			# Node js 23
