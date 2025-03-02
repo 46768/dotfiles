@@ -38,4 +38,16 @@
 			pkgs.godot_4
 			pkgs.gimp
 	];
+
+	programs.librewolf = {
+		enable = true;
+
+		settings = {
+			"privacy.resistFingerprinting.letterboxing" = true;
+		};
+
+		policies = {
+			DisableTelemetry = true;
+		};
+	}
 }
