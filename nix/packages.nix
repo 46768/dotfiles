@@ -49,5 +49,5 @@
 		policies = {
 			DisableTelemetry = true;
 		};
-	}
+	};
 }
