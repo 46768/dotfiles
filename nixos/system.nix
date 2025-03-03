@@ -69,9 +69,6 @@ nix.settings = {
 	];
   };
 
-  services.xserver.enable = true;
-  services.xserver.xkb.layout = "us,th";
-
 services.displayManager.sddm.enable = true;
 services.displayManager.sddm.wayland.enable = true;
 
@@ -86,9 +83,6 @@ services.displayManager.sddm.wayland.enable = true;
 		pulse.enable = true;
 	};
 
-# Enable printing
-services.printing.enable = true;
-
 # Enable touchpad support (enabled default in most desktopManager).
 	services.libinput.enable = true;
 
@@ -97,10 +91,6 @@ services.printing.enable = true;
 
 # Virtualisation
 	virtualisation.libvirtd.enable = true;
-	virtualisation.docker.rootless = {
-		enable = true;
-		setSocketVariable = true;
-	};
 	programs.virt-manager.enable = true;
 
 	environment.systemPackages = with pkgs; [
@@ -109,10 +99,6 @@ services.printing.enable = true;
 
 # Util
 			unzip
-
-# Print driver
-			cups
-			hplip
 
 # C stuff
 			glibc
