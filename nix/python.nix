@@ -3,5 +3,6 @@
 {
 	home.packages = [
 		pkgs.conda
+		pkgs.sphinx
 	];
 }
