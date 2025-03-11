@@ -36,7 +36,6 @@
 			# Game dev
 			pkgs.godot_4
 			pkgs.gimp
-			pkgs.postman
 	];
 
 	programs.librewolf = {

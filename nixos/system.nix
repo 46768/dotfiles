@@ -13,7 +13,6 @@
   # Enable broadcom sta
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "broadcom-sta"
-	"postman"
   ];
 
 # Enable nix flakes
