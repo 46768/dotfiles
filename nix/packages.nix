@@ -5,7 +5,7 @@
 # environment.
 	home.packages = [
 		pkgs.fastfetch
-			pkgs.dolphin
+			pkgs.kdePackages.dolphin
 
 			# Node js 23
 			pkgs.nodejs_23
