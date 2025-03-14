@@ -34,7 +34,7 @@
 			pkgs.prismlauncher
 
 			# Game dev
-			pkgs.godot
+			pkgs.godot_4
 			pkgs.gimp
 	];
 
