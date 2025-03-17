@@ -32,6 +32,7 @@
 
 			# Gaming
 			pkgs.prismlauncher
+			pkgs.obs-studio
 
 			# Game dev
 			pkgs.godot_4
