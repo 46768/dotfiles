@@ -20,6 +20,7 @@
 			pkgs.valgrind
 			pkgs.doxygen
 			pkgs.cmocka
+			pkgs.scons
 
 			# GNU Plot
 			pkgs.gnuplot
