@@ -8,6 +8,7 @@
 			pkgs.kdePackages.dolphin
 			pkgs.brightnessctl
 			pkgs.w3m
+			pkgs.fasm
 
 			# Node js 23
 			pkgs.nodejs_23
