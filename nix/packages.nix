@@ -10,9 +10,6 @@
 			pkgs.w3m
 			pkgs.fasm
 
-			pkgs.pinentry-tty
-			pkgs.gnupg
-
 			# Node js 23
 			pkgs.nodejs_23
 
