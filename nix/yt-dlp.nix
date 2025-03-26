@@ -6,7 +6,7 @@
 		settings = {
 			downloader = "curl";
 			progress = true;
-			output = "~/yt-download/$(title)s.%(ext)s";
+			output = "~/yt-download/%(title)s.%(ext)s";
 		};
 	};
 }
