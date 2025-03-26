@@ -9,6 +9,7 @@
 			pkgs.brightnessctl
 			pkgs.w3m
 			pkgs.fasm
+			pkgs.gnupg
 
 			# Node js 23
 			pkgs.nodejs_23
