@@ -6,6 +6,7 @@
 	home.packages = [
 		pkgs.fastfetch
 			pkgs.kdePackages.dolphin
+			pkgs.brightnessctl
 
 			# Node js 23
 			pkgs.nodejs_23
