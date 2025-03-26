@@ -9,6 +9,8 @@
 			pkgs.brightnessctl
 			pkgs.w3m
 			pkgs.fasm
+
+			pkgs.pinentry-tty
 			pkgs.gnupg
 
 			# Node js 23
