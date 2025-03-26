@@ -26,6 +26,7 @@
 			./nix/btop.nix
 			./nix/python.nix
 			./nix/languages.nix
+			./nix/yt-dlp.nix
 	];
 
 # Enable XDG
