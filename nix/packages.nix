@@ -9,6 +9,7 @@
 			pkgs.brightnessctl
 			pkgs.w3m
 			pkgs.fasm
+			pkgs.android-tools
 
 			# Node js 23
 			pkgs.nodejs_23
