@@ -42,9 +42,6 @@ nix.settings = {
 	'';
 	boot.loader.efi.canTouchEfiVariables = true;
 	boot.supportedFilesystems = [ "ntfs" ];
-	boot.extraModulePackages = with config.boot.kernelPackages; [
-		rtl88xxau-aircrack
-	];
 
 	networking.hostName = "pnixos";
 	networking.networkmanager.enable = true;
