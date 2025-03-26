@@ -12,6 +12,7 @@ in
 		'';
 		shellAliases = {
 			"sys-rebuild" = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
+			"sys-update" = "sudo nix flake update --flake /etc/nixos && nix flake update --flake ${configDir}/home-manager";
 			"valgrind-f" = "valgrind --leak-check=full --track-origins=yes -s";
 			"vinote" = "NVIM_APPNAME=nvim-notes nvim";
 			"panic" = "echo 'pls no shutdown'";
