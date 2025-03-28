@@ -121,7 +121,7 @@ services.displayManager.sddm.wayland.enable = true;
 			gdb
 
 			# Python 3
-			python3
+			python313
 
 			# Cron
 			cron
