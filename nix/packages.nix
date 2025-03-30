@@ -25,6 +25,7 @@
 			pkgs.doxygen
 			pkgs.cmocka
 			pkgs.scons
+			pkgs.meson
 
 			# GNU Plot
 			pkgs.gnuplot
