@@ -26,6 +26,7 @@
 			pkgs.cmocka
 			pkgs.scons
 			pkgs.meson
+			pkgs.ninja
 
 			# GNU Plot
 			pkgs.gnuplot
