@@ -10,6 +10,7 @@
 			pkgs.w3m
 			pkgs.fasm
 			pkgs.android-tools
+			pkgs.bluetui
 
 			# Node js 23
 			pkgs.nodejs_23
