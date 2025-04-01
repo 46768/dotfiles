@@ -103,6 +103,12 @@ services.displayManager.sddm.wayland.enable = true;
 # Enable OpenGL
 	hardware.graphics.enable = true;
 
+	hardware.bluetooth = {
+		enable = true;
+		powerOnBoot = true;
+	};
+	services.blueman.enable = true;
+
 # Virtualisation
 	virtualisation.libvirtd.enable = true;
 	programs.virt-manager.enable = true;
