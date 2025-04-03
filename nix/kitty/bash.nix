@@ -74,5 +74,14 @@ fi
 sudo rm -r $(ls -d /etc/nixos/* | grep -v -i ".*/hardware-configuration.nix")
 sudo cp -r ${configDir}/home-manager/nixos/* /etc/nixos
 		 '')
+
+		(pkgs.writeShellScriptBin "extract-audio" ''
+if ! command -v ffmpeg >/dev/null 2>&1; then
+	echo "ffmpeg not found"
+	exit 1
+fi
+
+echo "${1}"
+		 '')
 	];
 }

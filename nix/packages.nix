@@ -10,7 +10,7 @@
 			pkgs.w3m
 			pkgs.fasm
 			pkgs.android-tools
-			pkgs.bluetui
+			pkgs.ffmpeg
 
 			# Node js 23
 			pkgs.nodejs_23
