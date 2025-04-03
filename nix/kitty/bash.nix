@@ -87,7 +87,7 @@ if [ $# -ne 1 ]; then
 
 fpath=$1
 fname=$(basename -s .mp4 $1)
-outname=''${fname}
+outname=$${fname}
 ffmpeg -i $fpath -vn -acodec copy $outname
 		 '')
 	];
