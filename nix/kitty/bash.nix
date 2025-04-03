@@ -81,7 +81,14 @@ if ! command -v ffmpeg >/dev/null 2>&1; then
 	exit 1
 fi
 
-echo "$1"
+if [ $# -ne 1 ]; then
+	echo "extract-audio: [mp4_video]"
+	exit 1
+
+fpath=$1
+fname=$(basename -s .mp4 $1)
+outname=''${fname}
+ffmpeg -i $fpath -vn -acodec copy $outname
 		 '')
 	];
 }
