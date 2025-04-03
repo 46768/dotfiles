@@ -11,6 +11,7 @@
 			pkgs.fasm
 			pkgs.android-tools
 			pkgs.ffmpeg
+			pkgs.android-studio
 
 			# Node js 23
 			pkgs.nodejs_23
