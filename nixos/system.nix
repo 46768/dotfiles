@@ -13,6 +13,7 @@
   # Enable broadcom sta
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "broadcom-sta"
+	"android-studio"
   ];
 
 # Enable nix flakes
