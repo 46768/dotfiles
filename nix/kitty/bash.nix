@@ -84,6 +84,7 @@ fi
 if [ $# -ne 1 ]; then
 	echo "extract-audio: [mp4_video]"
 	exit 1
+fi
 
 fpath=$1
 fname=$(basename -s .mp4 $1)
