@@ -89,7 +89,7 @@ fi
 fpath=$1
 fname=$(basename -s .mp4 $1)
 outname=''${fname}.mp3
-ffmpeg -i $fpath -vn -acodec copy $outname
+ffmpeg -i $fpath -q:a 0 -map a $outname
 		 '')
 	];
 }
