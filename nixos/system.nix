@@ -11,10 +11,7 @@
 		];
 
   # Enable broadcom sta
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "broadcom-sta"
-	"android-studio-stable"
-  ];
+  nixpkgs.config.allowUnfree = true;
 
 # Enable nix flakes
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
