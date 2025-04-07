@@ -6,11 +6,16 @@
 	home.packages = [
 		pkgs.fastfetch
 			pkgs.kdePackages.dolphin
+
+			# Utilities
 			pkgs.brightnessctl
 			pkgs.w3m
-			pkgs.fasm
-			pkgs.android-tools
+
+			# Media processing
 			pkgs.ffmpeg
+
+			# Android Dev
+			pkgs.android-tools
 			pkgs.android-studio
 
 			# Node js 23
@@ -25,13 +30,8 @@
 			pkgs.clang-tools
 			pkgs.valgrind
 			pkgs.doxygen
-			pkgs.cmocka
-			pkgs.scons
 			pkgs.meson
 			pkgs.ninja
-
-			# GNU Plot
-			pkgs.gnuplot
 
 			# Profiling
 			pkgs.linuxPackages_latest.perf
@@ -43,9 +43,13 @@
 			pkgs.prismlauncher
 			pkgs.obs-studio
 
-			# Game dev
+			# Game Dev
 			pkgs.godot_4
 			pkgs.gimp
+
+			# Python
+			pkgs.conda
+			pkgs.sphinx
 	];
 
 	programs.librewolf = {
@@ -57,6 +61,37 @@
 
 		policies = {
 			DisableTelemetry = true;
+		};
+	};
+
+	programs.btop = {
+		enable = true;
+	};
+
+	programs.git = {
+		enable = true;
+		userName = "46768";
+		userEmail = "46768@bodin.ac.th";
+
+		extraConfig = {
+			init.defaultBranch = "main";
+			credential.helper = "store";
+		};
+	};
+
+	programs.neovim = {
+		enable = true;
+		viAlias = true;
+		vimAlias = true;
+	};
+
+	programs.yt-dlp = {
+		enable = true;
+		settings = {
+			downloader = "curl";
+			progress = true;
+			output = "~/yt-download/%(title)s.%(ext)s";
+			concurrent-fragments = 4;
 		};
 	};
 }

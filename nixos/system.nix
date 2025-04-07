@@ -8,10 +8,10 @@
 	imports =
 		[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
+	
+		# User accounts
+		./users.nix
 		];
-
-  # Enable broadcom sta
-  nixpkgs.config.allowUnfree = true;
 
 # Enable nix flakes
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -96,16 +96,16 @@ services.input-remapper.enable = true;
 			CPU_MAX_PERF_ON_AC = 100;
 
 			CPU_MIN_PERF_ON_BAT = 0;
-			CPU_MAX_PERF_ON_BAT = 100;
+			CPU_MAX_PERF_ON_BAT = 10;
 		};
 	};
 
 # Enable OpenGL
-	hardware.graphics.enable = true;
+	# hardware.graphics.enable = true;
 
 	hardware.bluetooth = {
 		enable = true;
-		powerOnBoot = true;
+		# powerOnBoot = true;
 	};
 	services.blueman.enable = true;
 
@@ -115,8 +115,6 @@ services.input-remapper.enable = true;
 
 	environment.systemPackages = with pkgs; [
 			home-manager
-			git
-
 # Util
 			unzip
 
@@ -128,9 +126,6 @@ services.input-remapper.enable = true;
 
 			# Python 3
 			python313
-
-			# Cron
-			cron
 
 # Virtualization
 			virtiofsd

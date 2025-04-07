@@ -20,14 +20,8 @@
 
 	imports = [
 		./nix/hyprland/hyprland.nix
-			./nix/neovim.nix
-			./nix/git.nix
-			./nix/packages.nix
-			./nix/btop.nix
-			./nix/python.nix
-			./nix/languages.nix
-			./nix/yt-dlp.nix
-			./nix/gpg.nix
+		./nix/packages.nix
+		./nix/languages.nix
 	];
 
 # Enable XDG
