@@ -154,6 +154,14 @@ services.input-remapper.enable = true;
 		sarabun-font
 	];
 
+	fonts.fontconfig = {
+		defaultFonts = {
+			serif = [ "FiraCode Nerd Font" "Sarabun" ];
+			sansSerif = [ "FiraCode Nerd Font" "Sarabun" ];
+			monospace = [ "FiraCode Nerd Font Mono" "Sarabun" ];
+		};
+	};
+
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
 # programs.mtr.enable = true;
