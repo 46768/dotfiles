@@ -70,6 +70,8 @@ nix.settings = {
 services.displayManager.sddm.enable = true;
 services.displayManager.sddm.wayland.enable = true;
 
+services.input-remapper.enable = true;
+
 # Enable CUPS to print documents.
 # services.printing.enable = true;
 
