@@ -9,7 +9,7 @@
 			"wheel"
 			"networkmanager"
 			"libvirtd"
-			"docker"
+			"wireshark"
 		];
 	};
 }
