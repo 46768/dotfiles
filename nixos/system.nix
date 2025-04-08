@@ -115,6 +115,7 @@ services.input-remapper.enable = true;
 
 	programs.wireshark = {
 		enable = true;
+		package = pkgs.wireshark;
 		dumpcap.enable = true;
 		usbmon.enable = true;
 	};
