@@ -113,6 +113,12 @@ services.input-remapper.enable = true;
 	virtualisation.libvirtd.enable = true;
 	programs.virt-manager.enable = true;
 
+	programs.wireshark = {
+		enable = true;
+		dumpcap.enable = true;
+		usbmon.enable = true;
+	};
+
 	environment.systemPackages = with pkgs; [
 			home-manager
 # Util

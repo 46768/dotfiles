@@ -10,7 +10,6 @@
 			# Utilities
 			pkgs.brightnessctl
 			pkgs.w3m
-			pkgs.wireshark
 
 			# Media processing
 			pkgs.ffmpeg
