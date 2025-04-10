@@ -51,6 +51,7 @@
 			# Python
 			pkgs.conda
 			pkgs.sphinx
+			pkgs.manim
 	];
 
 	programs.librewolf = {
