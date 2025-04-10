@@ -46,6 +46,7 @@
 			# Game Dev
 			pkgs.godot_4
 			pkgs.gimp
+			pkgs.krita
 
 			# Python
 			pkgs.conda
