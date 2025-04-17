@@ -14,6 +14,7 @@
 		# Hyprland Clipboard
 		pkgs.wl-clipboard
 		pkgs.grim
+		pkgs.slurp
 	];
 
 	wayland.windowManager.hyprland = {
@@ -156,6 +157,7 @@
 				"$mainMod, F, exec, $webBrowser"
 				"$mainMod, L, exec, hyprlock"
 				"$mainMod, N, exec, grim"
+				"$mainMod, B, exec, slurp | grim"
 
 				"$mainMod, left, movefocus, l"
 				"$mainMod, right, movefocus, r"
