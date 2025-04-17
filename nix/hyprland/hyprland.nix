@@ -157,7 +157,7 @@
 				"$mainMod, F, exec, $webBrowser"
 				"$mainMod, L, exec, hyprlock"
 				"$mainMod, N, exec, grim"
-				"$mainMod, B, exec, slurp | grim"
+				"$mainMod, B, exec, slurp | grim -g -"
 
 				"$mainMod, left, movefocus, l"
 				"$mainMod, right, movefocus, r"
