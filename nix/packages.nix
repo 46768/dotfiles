@@ -90,7 +90,7 @@
 	programs.yt-dlp = {
 		enable = true;
 		settings = {
-			downloader = "curl";
+			downloader = "aria2c";
 			progress = true;
 			output = "~/yt-download/%(title)s.%(ext)s";
 			concurrent-fragments = 4;
