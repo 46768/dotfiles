@@ -11,15 +11,15 @@
 		system = "x86_64-linux";
 		pkgs = nixpkgs.legacyPackages.${system};
 	in {
-		nixosConfigurations.nixos = pkgs.lib.nixosSystem {
-			specialArgs = { inherit inputs; };
+		nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+			specialArgs = { inherit inputs; pkgs = pkgs; };
 			system = system;
 			modules = [
 				./system.nix
 			];
 		};
 
-		nixosConfigurations.live = pkgs.lib.nixosSystem {
+		nixosConfigurations.live = nixpkgs.lib.nixosSystem {
 			system = system;
 			modules = [
 				(nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
