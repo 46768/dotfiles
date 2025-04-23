@@ -6,17 +6,21 @@
 		hyprland.url = "github:hyprwm/Hyprland";
 	};
 
-	outputs = inputs@{ self, nixpkgs, ... }: {
-		nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+	outputs = { self, nixpkgs, ... }@inputs:
+	let
+		system = "x86_64-linux";
+		pkgs = nixpkgs.legacyPackages.${system};
+	in {
+		nixosConfigurations.nixos = pkgs.lib.nixosSystem {
 			specialArgs = { inherit inputs; };
-			system = "x86_64-linux";
+			system = system;
 			modules = [
 				./system.nix
 			];
 		};
 
-		nixosConfigurations.live = nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
+		nixosConfigurations.live = pkgs.lib.nixosSystem {
+			system = system;
 			modules = [
 				(nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
 			];
