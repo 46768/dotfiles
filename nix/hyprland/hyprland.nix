@@ -158,6 +158,7 @@
 				"$mainMod, L, exec, hyprlock"
 				"$mainMod, N, exec, grim"
 				"$mainMod, B, exec, slurp | grim -g -"
+				"$mainMod, S, exec, $webBrowser https://search.nixos.org/packages"
 
 				"$mainMod, left, movefocus, l"
 				"$mainMod, right, movefocus, r"
