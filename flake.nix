@@ -5,10 +5,7 @@
 # Specify the source of Home Manager and Nixpkgs.
 		nixos-flake.url = "path:/etc/nixos";
 		nixpkgs.follows = "nixos-flake/nixpkgs";
-		home-manager = {
-			url = "github:nix-community/home-manager";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		home-manager.follows = "nixos-flake/home-manager";
 	};
 
 	outputs = { self, nixpkgs, home-manager, ... }@inputs:
