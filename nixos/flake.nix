@@ -13,13 +13,9 @@
 	outputs = { self, nixpkgs, home-manager, ... }@inputs:
 	let
 		system = "x86_64-linux";
-		pkgs_config = {
-			allowUnfree = true;
-		};
-		pkgs = import nixpkgs { system = system; config = pkgs_config; };
 	in {
 		nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-			specialArgs = { inherit inputs; pkgs = pkgs; };
+			specialArgs = { inherit inputs; };
 			system = system;
 			modules = [
 				./system.nix
