@@ -44,7 +44,7 @@ nix.settings = {
 	networking.hostName = "pnixos";
 	networking.networkmanager.enable = true;
 
-	time.timeZone = "America/Vancouver";
+	time.timeZone = "Asia/Bangkok";
 
 # Configure network proxy if necessary
 # networking.proxy.default = "http://user:password@proxy:port/";
